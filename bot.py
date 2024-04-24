@@ -17,6 +17,7 @@ async def hello(client: Client, message: types.Message):
         msg = "Iltimos, menga yozish uchun avval quyidagi kanallarga/guruhlarga obuna bo'ling/qo'shiling:\n\n"
         count = 0
         for chat_id in CHAT_IDS:
+            chat_id = int(chat_id)
             try:
                 chat_member = await client.get_chat_member(chat_id, message.from_user.id)
             except errors.UserNotParticipant:
