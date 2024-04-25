@@ -4,7 +4,7 @@ from environs import Env
 env = Env()
 env.read_env()
 
-app = Client("userbot")
+app = Client("userbot", api_hash=env.str("API_HASH"), api_id=env.int("API_ID"))
 
 WHITE_LIST = env.list("WHITE_LIST")
 
