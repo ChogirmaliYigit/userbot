@@ -6,6 +6,8 @@ env.read_env()
 
 app = Client("userbot", api_hash=env.str("API_HASH"), api_id=env.int("API_ID"))
 
+WHITE_LIST = env.list("WHITE_LIST")
+
 CHAT_ID = env.int("CHAT_ID")
 
 
