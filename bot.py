@@ -10,6 +10,7 @@ WHITE_LIST = env.list("WHITE_LIST")
 
 CHAT_ID = env.int("CHAT_ID")
 
+msg_sent_users = []
 
 @app.on_message(filters.private)
 async def hello(client: Client, message: types.Message):
@@ -49,11 +50,13 @@ To'g'ri javob yo'llaganlar o'rtasida "RANDOM" dasturi yordamida OMADLI ISHTIROKC
 Omadli ishtirokchi SIZ bo'lishingiz mumkin!
 
 Bizni kuzatishda davom eting. Bundan ham yaxshi loyihalarimiz hali oldinda!"""
-        await message.reply(
-            msg,
-            parse_mode=enums.ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-        )
+        if message.from_user.id not in msg_sent_users:
+            await message.reply(
+                msg,
+                parse_mode=enums.ParseMode.MARKDOWN,
+                disable_web_page_preview=True,
+            )
+            msg_sent_users.append(message.from_user.id)
 
 
 app.run()
