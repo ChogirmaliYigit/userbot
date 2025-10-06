@@ -72,7 +72,7 @@ Javob yo'llash uchun avval quyidagi kanalga obuna bo'lishingiz zarur!
                 parse_mode=enums.ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
             )
-            msg_sent_users.append(message.from_user.id)
+            second_msg_sent_users.append(message.from_user.id)
 
 
 app.run()
