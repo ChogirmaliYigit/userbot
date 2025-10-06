@@ -40,13 +40,6 @@ Javob yo'llash uchun avval quyidagi kanalga obuna bo'lishingiz zarur!
                        " kerak bo'ladi.](https://t.me/M_Fiz_Mat)\n\n**Natija har kuni kech soat 20:00 da "
                        "t.me/maxsus_fiz_mat telegram kanalida jonli efirda aniqlanadi.**\n\n[Kanalga obuna bo'lishni "
                        "unutmang!](https://t.me/MAXSUS_FIZ_MAT)")
-            if message.from_user.id not in msg_sent_users:
-                await message.reply(
-                    msg,
-                    parse_mode=enums.ParseMode.MARKDOWN,
-                    disable_web_page_preview=True,
-                )
-                msg_sent_users.append(message.from_user.id)
         else:
 #             msg = """"KUN SAVOLI" loyihasida har kuni yangi savollar joylanadi. Har kuni kech soat 20:00 da @maxsus_fiz_mat kanalida jonli efir bo'ladi.
 #
@@ -64,6 +57,8 @@ Javob yo'llash uchun avval quyidagi kanalga obuna bo'lishingiz zarur!
                    "*Natija har kuni kech soat 20:00 da t.me/maxsus_fiz_mat telegram va "
                    "[@maxsus_fiz.mat](https://www.instagram.com/maxsus_fiz.mat/) instagaram kanallarida "
                    "jonli efirda aniqlanadi.*\n\n[Kanalga obuna bo'lishni unutmang!](https://t.me/MAXSUS_FIZ_MAT)")
+
+        if message.from_user.id not in msg_sent_users:
             await message.reply(
                 msg,
                 parse_mode=enums.ParseMode.MARKDOWN,
