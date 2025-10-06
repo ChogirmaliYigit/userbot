@@ -41,15 +41,22 @@ Javob yo'llash uchun avval quyidagi kanalga obuna bo'lishingiz zarur!
                        "t.me/maxsus_fiz_mat telegram kanalida jonli efirda aniqlanadi.**\n\n[Kanalga obuna bo'lishni "
                        "unutmang!](https://t.me/MAXSUS_FIZ_MAT)")
         else:
-            msg = """"KUN SAVOLI" loyihasida har kuni yangi savollar joylanadi. Har kuni kech soat 20:00 da @maxsus_fiz_mat kanalida jonli efir bo'ladi. 
-
-**Albatta qatnashing!** 
-
-To'g'ri javob yo'llaganlar o'rtasida "RANDOM" dasturi yordamida OMADLI ISHTIROKCHI aniqlanadi va pul mukofoti taqdim etiladi.
-
-Omadli ishtirokchi SIZ bo'lishingiz mumkin!
-
-Bizni kuzatishda davom eting. Bundan ham yaxshi loyihalarimiz hali oldinda!"""
+#             msg = """"KUN SAVOLI" loyihasida har kuni yangi savollar joylanadi. Har kuni kech soat 20:00 da @maxsus_fiz_mat kanalida jonli efir bo'ladi.
+#
+# **Albatta qatnashing!**
+#
+# To'g'ri javob yo'llaganlar o'rtasida "RANDOM" dasturi yordamida OMADLI ISHTIROKCHI aniqlanadi va pul mukofoti taqdim etiladi.
+#
+# Omadli ishtirokchi SIZ bo'lishingiz mumkin!
+#
+# Bizni kuzatishda davom eting. Bundan ham yaxshi loyihalarimiz hali oldinda!"""
+            msg = ("Assalomu alaykum.\n\n"
+                   "\"MAXSUS FIZ-MAT\" o'quv markazi tomonidan tashkil etilgan \"KUN SAVOLI\" viktorinasida "
+                   "qatnashayotganingiz uchun minnatdormiz.\n\n"
+                   "[Javobni shu profilga ishlanishi bilan yuboringiz kerak bo'ladi.](https://t.me/M_Fiz_Mat)\n\n"
+                   "*Natija har kuni kech soat 20:00 da t.me/maxsus_fiz_mat telegram va "
+                   "[@maxsus_fiz.mat](https://www.instagram.com/maxsus_fiz.mat/) instagaram kanallarida "
+                   "jonli efirda aniqlanadi.*\n\n[Kanalga obuna bo'lishni unutmang!](https://t.me/MAXSUS_FIZ_MAT)")
         if message.from_user.id not in msg_sent_users:
             await message.reply(
                 msg,
